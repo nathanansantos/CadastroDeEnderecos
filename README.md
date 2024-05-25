@@ -1,0 +1,1 @@
+Aplicação web em C# que permite o usuário realizar login e gerenciar um CRUD de endereços, podendo inserir o endereço manualmente ou informar um CEP para aplicação buscar os dados do endereço através da integração com a API do ViaCEP (https://viacep.com.br/), além disso ele também poderá exportar os seus endereços salvos para um arquivo CSV.
