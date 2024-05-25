@@ -1,4 +1,4 @@
-﻿    
+﻿@model List<EnderecoModel>
 @{
     ViewData["Title"] = "Lista de endereços";
 }
@@ -28,58 +28,29 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>
-                <div>
-                <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="Endereco" asp-action="Delete">Deletar</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-            <td>fat</td>
-            <td>fat</td>
-            <td>fat</td>
-            <td>fat</td>
-            <td>fat</td>
-            <td>
-                <div>
-                    <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
-                    <a role="button" class="btn btn-danger" asp-action="Delete">Deletar</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>twitter</td>
-            <td>
-                <div>
-                    <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
-                    <a role="button" class="btn btn-danger" asp-controller="Endereco" asp-action="Delete">Deletar</a>
-                </div>
-            </td>
-        </tr>
-    </tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (EnderecoModel endereco in Model)
+                {
+                    <tr>
+                        <th scope="row"> @endereco.Id<th>
+                        <td>@endereco.Cep</td>
+                        <td>@endereco.Logradouro</td>
+                        <td>@endereco.Complemento</td>
+                        <td>@endereco.Bairro</td>
+                        <td>@endereco.Cidade</td>
+                        <td>@endereco.Uf</td>
+                        <td>@endereco.Numero</td>
+                        <td>
+                            <div>
+                                <a role="button" class="btn btn-success" asp-route-id="@endereco.Id" asp-controller="Endereco" asp-action="Edit">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@endereco.Id" asp-controller="Endereco" asp-action="Delete">Deletar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
 </table>
 
 </div>
