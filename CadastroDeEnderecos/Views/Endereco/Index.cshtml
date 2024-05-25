@@ -1,0 +1,85 @@
+﻿    
+@{
+    ViewData["Title"] = "Lista de endereços";
+}
+<div class="d-grip gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary" asp-controller="Endereco" asp-action="Create" role="button">Adicionar endereço</a>
+    <br />
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Endereços</h1>
+    <br />
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CEP</th>
+            <th scope="col">Logradouro</th>
+            <th scope="col">Complemento</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">UF</th>
+            <th scope="col">Numero</th>
+            <th scope="col">ID usuario</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>
+                <div>
+                <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
+                <a role="button" class="btn btn-danger" asp-controller="Endereco" asp-action="Delete">Deletar</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+            <td>fat</td>
+            <td>fat</td>
+            <td>fat</td>
+            <td>fat</td>
+            <td>fat</td>
+            <td>
+                <div>
+                    <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-action="Delete">Deletar</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry the Bird</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>twitter</td>
+            <td>
+                <div>
+                    <a role="button" class="btn btn-success" asp-controller="Endereco" asp-action="Edit">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="Endereco" asp-action="Delete">Deletar</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

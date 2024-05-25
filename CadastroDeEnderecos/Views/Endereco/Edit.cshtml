@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Atualizar endereços";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Atualizar endereços</h1>
+    <br />
+</div>
+
+<form>
+    <div class="mb-3">
+        <label for="cep">CEP</label>
+        <input type="number" class="form-control" placeholder="Digite o cep">
+    </div>
+    <div class="mb-3">
+        <label for="logradouro">Logradouro</label>
+        <input type="text" class="form-control" placeholder="Digite o logradouro">
+    </div>
+    <div class="mb-3">
+        <label for="complemento">Complemento</label>
+        <input type="text" class="form-control" placeholder="Digite o complemento">
+    </div>
+    <div class="mb-3">
+        <label for="bairro">Bairro</label>
+        <input type="text" class="form-control" placeholder="Digite o bairro">
+    </div>
+
+    <div class="mb-3">
+        <label for="cidade">Cidade</label>
+        <input type="text" class="form-control" placeholder="Digite a cidade">
+    </div>
+
+    <div class="mb-3">
+        <label for="uf">UF</label>
+        <input type="text" class="form-control" placeholder="Digite a UF">
+    </div>
+
+    <div class="mb-3">
+        <label for="numero">Numero</label>
+        <input type="text" class="form-control" placeholder="Digite o número">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+    <a asp-controller="Endereco" asp-action="Index" class="btn btn-secondary" role="button">Voltar</a>
+</form>
