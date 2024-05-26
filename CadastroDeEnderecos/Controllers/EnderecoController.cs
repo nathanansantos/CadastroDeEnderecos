@@ -21,21 +21,41 @@ namespace CadastroDeEnderecos.Controllers
         {
             return View();
         }
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            EnderecoModel endereco = _enderecoService.ListarPorId(id);
+            return View(endereco);
         }
-        public IActionResult Delete()
+        public IActionResult DeleteConfirm(int id)
         {
-            return View();
+            EnderecoModel endereco = _enderecoService.ListarPorId(id);
+            return View(endereco);
         }
 
         [HttpPost]
         public IActionResult Create(EnderecoModel endereco)
         {
-            _enderecoService.Adicionar(endereco);
+            if (ModelState.IsValid)
+            {
+                _enderecoService.Adicionar(endereco);
+                return RedirectToAction("Index");
+            }
+            return View(endereco);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(EnderecoModel endereco)
+        {
+            _enderecoService.Atualizar(endereco);
             return RedirectToAction("Index");
         }
+     
+        public IActionResult Delete(int id)
+        {
+            _enderecoService.Apagar(id);
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

@@ -1,1 +1,4 @@
 .vs
+.vs/CadastroDeEnderecos/FileContentIndex/1cec7b46-bebf-4d01-a3ca-518882e38e94.vsidx
+.vs/CadastroDeEnderecos/FileContentIndex/8eeac3a0-292e-4c5e-b910-fc21a9270583.vsidx
+CadastroDeEnderecos/Views/Endereco/DeleteConfirm.cshtml

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model EnderecoModel
+@{
     ViewData["Title"] = "Atualizar endereços";
 }
 
@@ -8,37 +9,39 @@
     <br />
 </div>
 
-<form>
+<form asp-controller="Endereco" asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id">
     <div class="mb-3">
         <label for="cep">CEP</label>
-        <input type="number" class="form-control" placeholder="Digite o cep">
+        <input type="number" class="form-control" placeholder="Digite o cep" asp-for="Cep">
     </div>
     <div class="mb-3">
         <label for="logradouro">Logradouro</label>
-        <input type="text" class="form-control" placeholder="Digite o logradouro">
+        <input type="text" class="form-control" placeholder="Digite o logradouro" asp-for="Logradouro">
     </div>
     <div class="mb-3">
         <label for="complemento">Complemento</label>
-        <input type="text" class="form-control" placeholder="Digite o complemento">
+        <input type="text" class="form-control" placeholder="Digite o complemento" asp-for="Complemento">
     </div>
     <div class="mb-3">
         <label for="bairro">Bairro</label>
-        <input type="text" class="form-control" placeholder="Digite o bairro">
+        <input type="text" class="form-control" placeholder="Digite o bairro" asp-for="Bairro">
     </div>
 
     <div class="mb-3">
         <label for="cidade">Cidade</label>
-        <input type="text" class="form-control" placeholder="Digite a cidade">
+        <input type="text" class="form-control" placeholder="Digite a cidade" asp-for="Cidade">
     </div>
 
     <div class="mb-3">
         <label for="uf">UF</label>
-        <input type="text" class="form-control" placeholder="Digite a UF">
+        <input type="text" class="form-control" placeholder="Digite a UF" asp-for="Uf">
     </div>
 
     <div class="mb-3">
         <label for="numero">Numero</label>
-        <input type="text" class="form-control" placeholder="Digite o número">
+        <input type="text" class="form-control" placeholder="Digite o número" asp-for="Numero">
     </div>
 
     <button type="submit" class="btn btn-primary">Atualizar</button>

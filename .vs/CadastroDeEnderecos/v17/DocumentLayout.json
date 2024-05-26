@@ -7,24 +7,32 @@
       "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\models\\enderecomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\views\\endereco\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\views\\endereco\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\views\\endereco\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\views\\endereco\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\views\\endereco\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\views\\endereco\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\views\\endereco\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\views\\endereco\\deleteconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\services\\ienderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\services\\ienderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\cadastrodeenderecos\\cadastrodeenderecos\\views\\endereco\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C6A62D12-A30D-475B-AE75-D1A01F5588D0}|CadastroDeEnderecos\\CadastroDeEnderecos.csproj|solutionrelative:cadastrodeenderecos\\views\\endereco\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,72 +52,100 @@
               "RelativeDocumentMoniker": "CadastroDeEnderecos\\Models\\EnderecoModel.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Models\\EnderecoModel.cs",
               "RelativeToolTip": "CadastroDeEnderecos\\Models\\EnderecoModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wBMAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T21:01:27.841Z",
+              "WhenOpened": "2024-05-26T12:29:28.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Models\\UsuarioModel.cs",
-              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Models\\UsuarioModel.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Models\\UsuarioModel.cs",
-              "RelativeToolTip": "CadastroDeEnderecos\\Models\\UsuarioModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T21:01:18.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Index.cshtml",
               "RelativeDocumentMoniker": "CadastroDeEnderecos\\Views\\Endereco\\Index.cshtml",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Index.cshtml",
               "RelativeToolTip": "CadastroDeEnderecos\\Views\\Endereco\\Index.cshtml",
-              "ViewState": "AQIAAB0AAAAAAAAAAADwvyoAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAACXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-25T20:24:37.44Z",
+              "WhenOpened": "2024-05-26T11:49:15.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "DeleteConfirm.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\DeleteConfirm.cshtml",
+              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Views\\Endereco\\DeleteConfirm.cshtml",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\DeleteConfirm.cshtml",
+              "RelativeToolTip": "CadastroDeEnderecos\\Views\\Endereco\\DeleteConfirm.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T11:43:50.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EnderecoController.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Controllers\\EnderecoController.cs",
               "RelativeDocumentMoniker": "CadastroDeEnderecos\\Controllers\\EnderecoController.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Controllers\\EnderecoController.cs",
               "RelativeToolTip": "CadastroDeEnderecos\\Controllers\\EnderecoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAgwCoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:04:45.243Z"
+              "WhenOpened": "2024-05-26T11:19:44.173Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IEnderecoService.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\IEnderecoService.cs",
-              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Services\\IEnderecoService.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\IEnderecoService.cs",
-              "RelativeToolTip": "CadastroDeEnderecos\\Services\\IEnderecoService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:03:53.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "EnderecoService.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\EnderecoService.cs",
               "RelativeDocumentMoniker": "CadastroDeEnderecos\\Services\\EnderecoService.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\EnderecoService.cs",
               "RelativeToolTip": "CadastroDeEnderecos\\Services\\EnderecoService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAkwBsAAAAAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwC4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:01:25.672Z",
+              "WhenOpened": "2024-05-26T11:17:13.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEnderecoService.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\IEnderecoService.cs",
+              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Services\\IEnderecoService.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Services\\IEnderecoService.cs",
+              "RelativeToolTip": "CadastroDeEnderecos\\Services\\IEnderecoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T11:16:09.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Views\\Endereco\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Edit.cshtml",
+              "RelativeToolTip": "CadastroDeEnderecos\\Views\\Endereco\\Edit.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T11:12:43.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Create.cshtml",
+              "RelativeDocumentMoniker": "CadastroDeEnderecos\\Views\\Endereco\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\CadastroDeEnderecos\\CadastroDeEnderecos\\Views\\Endereco\\Create.cshtml",
+              "RelativeToolTip": "CadastroDeEnderecos\\Views\\Endereco\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T11:12:41.667Z",
               "EditorCaption": ""
             }
           ]
