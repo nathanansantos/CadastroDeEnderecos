@@ -11,5 +11,6 @@ namespace CadastroDeEnderecos.Data
         }
 
         public DbSet<EnderecoModel> Enderecos { get; set; }
+        public DbSet<UsuarioModel> Usuarios { get; set; }
     }
 }

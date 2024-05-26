@@ -1,0 +1,73 @@
+﻿@model List<UsuarioModel>
+@{
+    ViewData["Title"] = "Lista de usuarios";
+}
+<div class="d-grip gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary" asp-controller="Usuario" asp-action="Create" role="button">Adicionar usuário</a>
+
+</div>
+<br />
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<br />
+
+
+<div class="text-center">
+    <h1 class="display-4">Usuarios</h1>
+    <br />
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Perfil</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (UsuarioModel usuario in Model)
+                {
+                    <tr>
+                        <th scope="row"> @usuario.Id
+                        <th>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Usuario</td>
+                        <td>@usuario.Email</td>
+                        <td>@usuario.Perfil</td>
+                        <td>
+                            <div>
+                                <a role="button" class="btn btn-success" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Edit">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="DeleteConfirm">Deletar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado</td></tr>
+            }
+        </tbody>
+    </table>
+
+</div>
