@@ -15,33 +15,40 @@
     <div class="mb-3">
         <label for="cep">CEP</label>
         <input type="number" class="form-control" placeholder="Digite o cep" asp-for="Cep">
+        @Html.ValidationMessageFor(x => x.Cep)
     </div>
     <div class="mb-3">
         <label for="logradouro">Logradouro</label>
         <input type="text" class="form-control" placeholder="Digite o logradouro" asp-for="Logradouro">
+        @Html.ValidationMessageFor(x => x.Logradouro)
     </div>
     <div class="mb-3">
         <label for="complemento">Complemento</label>
         <input type="text" class="form-control" placeholder="Digite o complemento" asp-for="Complemento">
+
     </div>
     <div class="mb-3">
         <label for="bairro">Bairro</label>
         <input type="text" class="form-control" placeholder="Digite o bairro" asp-for="Bairro">
+        @Html.ValidationMessageFor(x => x.Bairro)
     </div>
 
     <div class="mb-3">
         <label for="cidade">Cidade</label>
         <input type="text" class="form-control" placeholder="Digite a cidade" asp-for="Cidade">
+        @Html.ValidationMessageFor(x => x.Cidade)
     </div>
 
     <div class="mb-3">
         <label for="uf">UF</label>
         <input type="text" class="form-control" placeholder="Digite a UF" asp-for="Uf">
+        @Html.ValidationMessageFor(x => x.Uf)
     </div>
 
     <div class="mb-3">
         <label for="numero">Numero</label>
         <input type="text" class="form-control" placeholder="Digite o número" asp-for="Numero">
+        @Html.ValidationMessageFor(x => x.Numero)
     </div>
 
     <button type="submit" class="btn btn-primary">Atualizar</button>

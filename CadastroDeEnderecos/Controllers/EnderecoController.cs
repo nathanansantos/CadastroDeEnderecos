@@ -35,25 +35,72 @@ namespace CadastroDeEnderecos.Controllers
         [HttpPost]
         public IActionResult Create(EnderecoModel endereco)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _enderecoService.Adicionar(endereco);
+                if (ModelState.IsValid)
+                {
+                    _enderecoService.Adicionar(endereco);
+                    TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                return View(endereco);
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Não foi possível cadastrar esse endereço. Detalhe do erro: {ex.Message}";
                 return RedirectToAction("Index");
             }
-            return View(endereco);
         }
 
         [HttpPost]
         public IActionResult Edit(EnderecoModel endereco)
         {
-            _enderecoService.Atualizar(endereco);
-            return RedirectToAction("Index");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _enderecoService.Atualizar(endereco);
+                    TempData["MensagemSucesso"] = "Endereço alterado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                return View("Edit", endereco);
+            }
+            catch (Exception ex)
+            {
+
+                TempData["MensagemErro"] = $"Não foi possível alterar esse endereço. Detalhe do erro: {ex.Message}";
+                return RedirectToAction("Index");
+
+            }
         }
      
         public IActionResult Delete(int id)
         {
-            _enderecoService.Apagar(id);
-            return RedirectToAction("Index");
+            try
+            {
+                bool apagado = _enderecoService.Apagar(id);
+
+                if(apagado)
+                {
+
+                    TempData["MensagemSucesso"] = "Endereço apagado com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Não foi possível apagar esse endereço.";
+
+                }
+                return RedirectToAction("Index");
+
+            }
+            catch (Exception ex)
+            {
+
+                TempData["MensagemErro"] = $"Não foi possível apagar esse endereço. Detalhe do erro: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+
+            
         }
 
 
