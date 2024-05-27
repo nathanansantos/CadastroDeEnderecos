@@ -1,5 +1,4 @@
-﻿@using CadastroDeEnderecos.Enums
-@model UsuarioModel
+﻿@model UsuarioModel
 @{
 
     ViewData["Title"] = "Alterar usuarios";
@@ -28,15 +27,6 @@
         @Html.ValidationMessageFor(x => x.Email)
 
 
-    </div>
-    <div class="mb-3">
-        <label for="perfil">Perfil</label>
-        <select class="form-control" asp-for="Perfil">
-            <option value="">Selecione</option>
-            <option value="@PerfilEnum.Administrador">Administrador</option>
-            <option value="@PerfilEnum.Comum">Comum</option>
-        </select>
-        @Html.ValidationMessageFor(x => x.Perfil)
     </div>
 
 

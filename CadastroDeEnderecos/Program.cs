@@ -1,4 +1,5 @@
 using CadastroDeEnderecos.Data;
+using CadastroDeEnderecos.Helper;
 using CadastroDeEnderecos.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,8 +13,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddSingleton<HttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ISessao, Sessao>();
+builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.AddSession(o =>
+{
+    o.Cookie.HttpOnly = true;
+    o.Cookie.IsEssential = true;
+});
+
 
 var app = builder.Build();
 
@@ -31,6 +43,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

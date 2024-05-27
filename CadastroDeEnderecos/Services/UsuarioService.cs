@@ -45,7 +45,6 @@ namespace CadastroDeEnderecos.Services
             usuarioDB.Nome = usuario.Nome;
             usuarioDB.Email = usuario.Email;
             usuarioDB.Usuario = usuario.Usuario;
-            usuarioDB.Perfil = usuario.Perfil;
 
 
             _context.Usuarios.Update(usuarioDB);

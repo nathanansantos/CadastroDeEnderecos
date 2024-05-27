@@ -1,5 +1,4 @@
-﻿using CadastroDeEnderecos.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CadastroDeEnderecos.Models
 {
@@ -19,9 +18,6 @@ namespace CadastroDeEnderecos.Models
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "{0} é obrigatório")]
-        public PerfilEnum? Perfil { get; set; }
 
         [Required(ErrorMessage = "Senha é obrigatória.")]
         [StringLength(100, ErrorMessage = "A {0} deve ter pelo menos {2} e no máximo {1} caracteres.", MinimumLength = 6)]

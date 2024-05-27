@@ -1,4 +1,5 @@
-﻿using CadastroDeEnderecos.Models;
+﻿using CadastroDeEnderecos.Helper;
+using CadastroDeEnderecos.Models;
 using CadastroDeEnderecos.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,13 +8,24 @@ namespace CadastroDeEnderecos.Controllers
     public class LoginController : Controller
     {
         private readonly IUsuarioService _usuarioService;
-        public LoginController(IUsuarioService usuarioService)
+        private readonly ISessao _sessao;
+
+        public LoginController(IUsuarioService usuarioService, ISessao sessao)
         {
+            _sessao = sessao;
             _usuarioService = usuarioService;
         }
         public IActionResult Index()
         {
+            //Redireciona para a home se o usuario estiver logado
+            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
             return View();
+        }
+
+        public IActionResult Sair()
+        {
+            _sessao.RemoverSessaoDoUsuario();
+            return RedirectToAction("Index", "Login");
         }
 
         [HttpPost]
@@ -29,6 +41,7 @@ namespace CadastroDeEnderecos.Controllers
                     {
                         if(usuario.SenhaValida(loginModel.Senha))
                         {
+                            _sessao.CriarSessaoDoUsuario(usuario);
                             return RedirectToAction("Index", "Home");
                         }
 

@@ -1,4 +1,5 @@
-﻿using CadastroDeEnderecos.Models;
+﻿using CadastroDeEnderecos.Helper;
+using CadastroDeEnderecos.Models;
 using CadastroDeEnderecos.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,8 +8,10 @@ namespace CadastroDeEnderecos.Controllers
     public class UsuarioController : Controller
     {
         private readonly IUsuarioService _usuarioService;
-        public UsuarioController(IUsuarioService usuarioService)
+        private readonly ISessao _sessao;
+        public UsuarioController(IUsuarioService usuarioService, ISessao sessao)
         {
+            _sessao = sessao;
             _usuarioService = usuarioService;
         }
 
@@ -33,14 +36,16 @@ namespace CadastroDeEnderecos.Controllers
                 //{
                     novoUsuario = _usuarioService.Adicionar(novoUsuario);
                     TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
-                    return RedirectToAction("Index");
-                //}
+                //_sessao.CriarSessaoDoUsuario(novoUsuario);
+                return RedirectToAction("Index","Endereco");
                 //return View(novoUsuario);
+                //}
+
 
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Não foi possível cadastrar esse endereço. Detalhe do erro: {ex.Message}";
+                TempData["MensagemErro"] = $"Não foi possível cadastrar esse usuário. Detalhe do erro: {ex.InnerException}";
                 return RedirectToAction("Index");
             }
         }
@@ -66,8 +71,7 @@ namespace CadastroDeEnderecos.Controllers
                         Id = usuarioSemSenhaModel.Id,
                         Nome = usuarioSemSenhaModel.Nome,
                         Usuario = usuarioSemSenhaModel.Usuario,
-                        Email = usuarioSemSenhaModel.Email,
-                        Perfil = usuarioSemSenhaModel.Perfil
+                        Email = usuarioSemSenhaModel.Email
                     };
 
                     usuario = _usuarioService.Atualizar(usuario);
