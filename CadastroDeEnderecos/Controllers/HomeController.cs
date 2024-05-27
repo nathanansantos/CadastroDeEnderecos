@@ -1,3 +1,5 @@
+
+
 using CadastroDeEnderecos.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,10 +12,8 @@ namespace CadastroDeEnderecos.Controllers
 
         public IActionResult Index()
         {
-            HomeModel home = new HomeModel();
-            home.Nome = "Nathan";
-            home.Email = "nathanansantos@gmail.com";
-            return View(home);
+
+            return View();
         }
 
         public IActionResult Privacy()

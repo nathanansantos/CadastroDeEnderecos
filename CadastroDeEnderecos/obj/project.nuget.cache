@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "96eskovcGNlKHaY2jpQgaxSoI11hhiai5LF4OMDc2SWoAqWcoREGG+bgQWvMJtk4CJLdkDwaP2fiXBFwszkxqQ==",
+  "dgSpecHash": "BIk1uYtVi0SFP5OssbMzZkVtPuSaUzxRPRS+hSCsoVjndLqX0VJVltshTK943fVYkxAPDZEqkCQCnBCIiK+3+Q==",
   "success": true,
   "projectFilePath": "C:\\src\\CadastroDeEnderecos\\CadastroDeEnderecos\\CadastroDeEnderecos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\natha\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\natha\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\natha\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512",
     "C:\\Users\\natha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\natha\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\natha\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

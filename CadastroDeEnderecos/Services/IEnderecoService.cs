@@ -9,5 +9,7 @@ namespace CadastroDeEnderecos.Services
         EnderecoModel Adicionar(EnderecoModel endereco);
         EnderecoModel Atualizar(EnderecoModel endereco);
         bool Apagar(int id);
+        public string GerarCsv(List<EnderecoModel> enderecos);
     }
 }
+            

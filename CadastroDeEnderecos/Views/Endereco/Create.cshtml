@@ -6,14 +6,11 @@
     var cep = Context.Request.Query["cep"];
 
     EnderecoModel endereco = new EnderecoModel();
-    string mapa = "";
-    string cliqueAqui = "";
+
 
     if (validaCep(cep))
     {
         endereco = ConsultaCep(cep);
-        cliqueAqui = "Clique aqui para visualizar o endereço no mapa";
-        mapa = $"https://www.google.com/maps/place/{endereco.Logradouro}+{endereco.Cep}";
     }
 }
 
@@ -24,7 +21,7 @@
 
 <form>
     <div class="form-group">
-        <label for="cep" control-label>CEP:</label>
+        <label for="cep" control-label>Pesquisa CEP:</label>
         <input type="search" name="cep" maxlength="9" />
         <button class="btn btn-primary">Pesquisar</button>
     </div>
@@ -74,6 +71,7 @@
     <button type="submit" class="btn btn-primary">Cadastrar</button>
     <a role="button" class="btn btn-secondary" asp-controller="Endereco" asp-action="Index">Voltar</a>
 </form>
+
 @functions {
 
     public EnderecoModel ConsultaCep(string cep)

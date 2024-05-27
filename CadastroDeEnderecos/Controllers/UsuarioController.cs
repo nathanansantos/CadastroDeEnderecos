@@ -35,7 +35,7 @@ namespace CadastroDeEnderecos.Controllers
                 //if (ModelState.IsValid)
                 //{
                     novoUsuario = _usuarioService.Adicionar(novoUsuario);
-                    TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
+                    TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso!";
                 //_sessao.CriarSessaoDoUsuario(novoUsuario);
                 return RedirectToAction("Index","Endereco");
                 //return View(novoUsuario);

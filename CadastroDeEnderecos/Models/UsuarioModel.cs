@@ -29,6 +29,7 @@ namespace CadastroDeEnderecos.Models
             return Senha == senha;
         }
 
+        public virtual List<EnderecoModel> Enderecos { get; set; }
 
         //public ICollection<EnderecoModel> Enderecos { get; set; }
     }

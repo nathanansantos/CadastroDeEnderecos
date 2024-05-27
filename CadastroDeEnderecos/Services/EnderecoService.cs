@@ -1,5 +1,15 @@
-﻿using CadastroDeEnderecos.Data;
+﻿
+using CadastroDeEnderecos.Data;
 using CadastroDeEnderecos.Models;
+using CsvHelper;
+using CsvHelper.Configuration;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using System.IO;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
 
 namespace CadastroDeEnderecos.Services
 {
@@ -10,7 +20,7 @@ namespace CadastroDeEnderecos.Services
         {
             _context = context;
         }
-  
+
         public EnderecoModel Adicionar(EnderecoModel endereco)
         {
             _context.Add(endereco);
@@ -61,5 +71,20 @@ namespace CadastroDeEnderecos.Services
             return _context.Enderecos.FirstOrDefault(x => x.Id == id);
         }
 
+        public List<EnderecoModel> ArquivoCsv()
+        {
+            return _context.Enderecos.ToList();
+        }
+
+        public string GerarCsv(List<EnderecoModel> enderecos)
+        {
+            var csv = new StringBuilder();
+
+            csv.AppendLine("Cep,Logradouro,Complemento,Bairro,Cidade,Uf,Numero");
+            foreach (var item in enderecos) {
+                csv.AppendLine($"{item.Cep},{item.Logradouro},{item.Complemento},{item.Bairro},{item.Cidade},{item.Uf},{item.Numero}"); }
+            return csv.ToString();
+        }
     }
 }
+

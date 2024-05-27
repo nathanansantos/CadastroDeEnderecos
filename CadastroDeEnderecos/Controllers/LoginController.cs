@@ -18,7 +18,7 @@ namespace CadastroDeEnderecos.Controllers
         public IActionResult Index()
         {
             //Redireciona para a home se o usuario estiver logado
-            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
+            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Endereco");
             return View();
         }
 
@@ -42,7 +42,7 @@ namespace CadastroDeEnderecos.Controllers
                         if(usuario.SenhaValida(loginModel.Senha))
                         {
                             _sessao.CriarSessaoDoUsuario(usuario);
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction("Index", "Endereco");
                         }
 
                         TempData["MensagemErro"] = $"Senha inválido(s). Tente novamente!";

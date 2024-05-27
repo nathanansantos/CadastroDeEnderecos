@@ -1,4 +1,5 @@
-﻿using CadastroDeEnderecos.Models;
+﻿using CadastroDeEnderecos.Data.Map;
+using CadastroDeEnderecos.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CadastroDeEnderecos.Data
@@ -12,5 +13,12 @@ namespace CadastroDeEnderecos.Data
 
         public DbSet<EnderecoModel> Enderecos { get; set; }
         public DbSet<UsuarioModel> Usuarios { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new EnderecoMap());
+
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

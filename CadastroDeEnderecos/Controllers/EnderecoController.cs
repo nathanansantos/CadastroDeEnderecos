@@ -2,6 +2,12 @@
 using CadastroDeEnderecos.Models;
 using CadastroDeEnderecos.Services;
 using Microsoft.AspNetCore.Mvc;
+using CsvHelper;
+using CsvHelper.Configuration;
+using System.IO;
+using Microsoft.AspNetCore.Mvc.Abstractions;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace CadastroDeEnderecos.Controllers
 {
@@ -39,13 +45,13 @@ namespace CadastroDeEnderecos.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
+                //if (ModelState.IsValid)
+                //{
                     _enderecoService.Adicionar(endereco);
                     TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
                     return RedirectToAction("Index");
-                }
-                return View(endereco);
+                ////}
+                //return View(endereco);
             }
             catch (Exception ex)
             {
@@ -75,14 +81,14 @@ namespace CadastroDeEnderecos.Controllers
 
             }
         }
-     
+
         public IActionResult Delete(int id)
         {
             try
             {
                 bool apagado = _enderecoService.Apagar(id);
 
-                if(apagado)
+                if (apagado)
                 {
 
                     TempData["MensagemSucesso"] = "Endereço apagado com sucesso!";
@@ -102,9 +108,17 @@ namespace CadastroDeEnderecos.Controllers
                 return RedirectToAction("Index");
             }
 
-            
+
         }
+        public IActionResult ExportarCsv()
+        {
+            var dados = _enderecoService.BuscarTodos();
+            var csv = _enderecoService.GerarCsv(dados);
+            var bytes = Encoding.UTF8.GetBytes(csv);
+            var arquivo = "dados.csv";
 
-
+            return File(bytes, "text/csv", arquivo);
+        }
     }
 }
+    

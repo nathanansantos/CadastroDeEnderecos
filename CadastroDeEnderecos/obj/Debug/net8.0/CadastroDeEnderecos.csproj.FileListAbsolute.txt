@@ -276,3 +276,4 @@ C:\src\CadastroDeEnderecos\CadastroDeEnderecos\obj\Debug\net8.0\refint\CadastroD
 C:\src\CadastroDeEnderecos\CadastroDeEnderecos\obj\Debug\net8.0\CadastroDeEnderecos.pdb
 C:\src\CadastroDeEnderecos\CadastroDeEnderecos\obj\Debug\net8.0\CadastroDeEnderecos.genruntimeconfig.cache
 C:\src\CadastroDeEnderecos\CadastroDeEnderecos\obj\Debug\net8.0\ref\CadastroDeEnderecos.dll
+C:\src\CadastroDeEnderecos\CadastroDeEnderecos\bin\Debug\net8.0\CsvHelper.dll
