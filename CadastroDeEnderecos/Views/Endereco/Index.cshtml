@@ -1,11 +1,10 @@
-﻿@model List<EnderecoModel>
+﻿@using CadastroDeEnderecos.Models.ViewModel
+@model List<EnderecoModel>
 @{
     ViewData["Title"] = "Lista de endereços";
+
+
 }
-<div class="d-grip gap-2 d-md-flex justify-content-md-start">
-    <a class="btn btn-primary" asp-controller="Endereco" asp-action="Create" role="button">Adicionar endereço</a>
-    
-</div>
 <br />
 @if (TempData["MensagemSucesso"] != null) {
 <div class="alert alert-success" role="alert">
@@ -28,11 +27,15 @@
     <h1 class="display-4">Endereços</h1>
     <br />
 
+        <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+            <a class="btn btn-primary" asp-controller="Endereco" asp-action="Create" role="button">Adicionar endereço</a>
+
+        </div>
 
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Id</th>
+            <th scope="col">ID</th>
             <th scope="col">CEP</th>
             <th scope="col">Logradouro</th>
             <th scope="col">Complemento</th>
@@ -45,7 +48,9 @@
         </tr>
     </thead>
     <tbody>
+            
             @if (Model != null && Model.Any())
+                
             {
                 foreach (EnderecoModel endereco in Model)
                 {
@@ -75,3 +80,5 @@
 </table>
 
 </div>
+
+

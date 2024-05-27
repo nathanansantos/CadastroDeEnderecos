@@ -12,6 +12,8 @@ namespace CadastroDeEnderecos.Controllers
         {
             _enderecoService = enderecoService;
         }
+
+
         public IActionResult Index()
         {
             List<EnderecoModel> enderecos = _enderecoService.BuscarTodos();
