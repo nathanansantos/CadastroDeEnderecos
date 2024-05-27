@@ -48,12 +48,11 @@
                 foreach (UsuarioModel usuario in Model)
                 {
                     <tr>
-                        <th scope="row"> @usuario.Id
-                        <th>
+                        <td scope="row"> @usuario.Id</td>
                         <td>@usuario.Nome</td>
                         <td>@usuario.Usuario</td>
                         <td>@usuario.Email</td>
-                        <td>@usuario.Perfil</td>
+                        <td>@(usuario.Perfil == CadastroDeEnderecos.Enums.PerfilEnum.Administrador ? "Admin" : "Comum")</td>
                         <td>
                             <div>
                                 <a role="button" class="btn btn-success" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Edit">Editar</a>

@@ -44,5 +44,80 @@ namespace CadastroDeEnderecos.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public IActionResult Edit(int id)
+        {
+            UsuarioModel usuario = _usuarioService.ListarPorId(id);
+            return View(usuario);
+        }
+
+
+        [HttpPost]
+        public IActionResult Edit(UsuarioSemSenhaModel usuarioSemSenhaModel)
+        {
+            try
+            {
+                UsuarioModel usuario = null;
+
+                if (ModelState.IsValid)
+                {
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenhaModel.Id,
+                        Nome = usuarioSemSenhaModel.Nome,
+                        Usuario = usuarioSemSenhaModel.Usuario,
+                        Email = usuarioSemSenhaModel.Email,
+                        Perfil = usuarioSemSenhaModel.Perfil
+                    };
+
+                    usuario = _usuarioService.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = "Usuario alterado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                return View(usuario);
+            }
+            catch (Exception ex)
+            {
+
+                TempData["MensagemErro"] = $"Não foi possível alterar esse endereço. Detalhe do erro: {ex.Message}";
+                return RedirectToAction("Index");
+
+            }
+        }
+
+        public IActionResult DeleteConfirm(int id)
+        {
+            UsuarioModel usuario = _usuarioService.ListarPorId(id);
+            return View(usuario);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                bool apagado = _usuarioService.Apagar(id);
+
+                if (apagado)
+                {
+
+                    TempData["MensagemSucesso"] = "Usuario apagado com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Não foi possível apagar esse usuario.";
+
+                }
+                return RedirectToAction("Index");
+
+            }
+            catch (Exception ex)
+            {
+
+                TempData["MensagemErro"] = $"Não foi possível apagar esse usuario. Detalhe do erro: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+
+
+        }
     }
 }

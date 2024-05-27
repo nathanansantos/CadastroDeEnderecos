@@ -11,6 +11,12 @@ namespace CadastroDeEnderecos.Services
             _context = context;
         }
 
+
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _context.Usuarios.FirstOrDefault(x => x.Usuario.ToUpper() == login.ToUpper());
+        }
+
         public UsuarioModel ListarPorId(int id)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Id == id);
