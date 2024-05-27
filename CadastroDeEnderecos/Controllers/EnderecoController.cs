@@ -1,39 +1,39 @@
-﻿using CadastroDeEnderecos.Data;
-using CadastroDeEnderecos.Models;
+﻿using CadastroDeEnderecos.Models;
 using CadastroDeEnderecos.Services;
 using Microsoft.AspNetCore.Mvc;
-using CsvHelper;
-using CsvHelper.Configuration;
-using System.IO;
-using Microsoft.AspNetCore.Mvc.Abstractions;
-using Microsoft.EntityFrameworkCore;
 using System.Text;
+using CadastroDeEnderecos.Helper;
 
 namespace CadastroDeEnderecos.Controllers
 {
     public class EnderecoController : Controller
     {
         private readonly IEnderecoService _enderecoService;
-        public EnderecoController(IEnderecoService enderecoService)
+        private readonly ISessao _sessao;
+
+        public EnderecoController(IEnderecoService enderecoService, ISessao sessao)
         {
             _enderecoService = enderecoService;
+            _sessao = sessao;
         }
-
 
         public IActionResult Index()
         {
             List<EnderecoModel> enderecos = _enderecoService.BuscarTodos();
             return View(enderecos);
         }
+
         public IActionResult Create()
         {
             return View();
         }
+
         public IActionResult Edit(int id)
         {
             EnderecoModel endereco = _enderecoService.ListarPorId(id);
             return View(endereco);
         }
+
         public IActionResult DeleteConfirm(int id)
         {
             EnderecoModel endereco = _enderecoService.ListarPorId(id);
@@ -45,13 +45,9 @@ namespace CadastroDeEnderecos.Controllers
         {
             try
             {
-                //if (ModelState.IsValid)
-                //{
-                    _enderecoService.Adicionar(endereco);
-                    TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
-                    return RedirectToAction("Index");
-                ////}
-                //return View(endereco);
+                _enderecoService.Adicionar(endereco);
+                TempData["MensagemSucesso"] = "Endereço cadastrado com sucesso!";
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -65,13 +61,9 @@ namespace CadastroDeEnderecos.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    _enderecoService.Atualizar(endereco);
-                    TempData["MensagemSucesso"] = "Endereço alterado com sucesso!";
-                    return RedirectToAction("Index");
-                }
-                return View("Edit", endereco);
+                _enderecoService.Atualizar(endereco);
+                TempData["MensagemSucesso"] = "Endereço alterado com sucesso!";
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -107,9 +99,8 @@ namespace CadastroDeEnderecos.Controllers
                 TempData["MensagemErro"] = $"Não foi possível apagar esse endereço. Detalhe do erro: {ex.Message}";
                 return RedirectToAction("Index");
             }
-
-
         }
+
         public IActionResult ExportarCsv()
         {
             var dados = _enderecoService.BuscarTodos();
@@ -121,4 +112,3 @@ namespace CadastroDeEnderecos.Controllers
         }
     }
 }
-    

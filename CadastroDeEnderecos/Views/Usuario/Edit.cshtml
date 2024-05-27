@@ -21,13 +21,6 @@
         <input type="text" class="form-control" placeholder="Digite o usuário" asp-for="Usuario">
         @Html.ValidationMessageFor(x => x.Usuario)
     </div>
-    <div class="mb-3">
-        <label for="email">E-mail</label>
-        <input type="text" class="form-control" placeholder="Digite o e-mail" asp-for="Email">
-        @Html.ValidationMessageFor(x => x.Email)
-
-
-    </div>
 
 
     <button type="submit" class="btn btn-primary">Cadastrar</button>

@@ -17,8 +17,7 @@ namespace CadastroDeEnderecos.Controllers
         }
         public IActionResult Index()
         {
-            //Redireciona para a home se o usuario estiver logado
-            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Endereco");
+            if (_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Endereco");
             return View();
         }
 
@@ -33,23 +32,21 @@ namespace CadastroDeEnderecos.Controllers
         {
             try
             {
-                //if (ModelState.IsValid)
-                //{
-                    UsuarioModel usuario = _usuarioService.BuscarPorLogin(loginModel.Login);
 
-                    if (usuario != null)
+                UsuarioModel usuario = _usuarioService.BuscarPorLogin(loginModel.Login);
+
+                if (usuario != null)
+                {
+                    if (usuario.SenhaValida(loginModel.Senha))
                     {
-                        if(usuario.SenhaValida(loginModel.Senha))
-                        {
-                            _sessao.CriarSessaoDoUsuario(usuario);
-                            return RedirectToAction("Index", "Endereco");
-                        }
-
-                        TempData["MensagemErro"] = $"Senha inválido(s). Tente novamente!";
+                        _sessao.CriarSessaoDoUsuario(usuario);
+                        return RedirectToAction("Index", "Endereco");
                     }
-                    TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s). Tente novamente!";
 
-                //}
+                    TempData["MensagemErro"] = $"Senha inválido(s). Tente novamente!";
+                }
+                TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s). Tente novamente!";
+
                 return View("Index");
 
             }

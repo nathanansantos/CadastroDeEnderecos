@@ -6,61 +6,63 @@
 
 }
 <br />
-@if (TempData["MensagemSucesso"] != null) {
-<div class="alert alert-success" role="alert">
-    <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-     @TempData["MensagemSucesso"]
-</div>
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
 }
 
-@if (TempData["MensagemErro"] != null) {
-<div class="alert alert-danger" role="alert">
-    <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-     @TempData["MensagemErro"]
-</div>  
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
 }
 <br />
 <div class="text-center">
     <h1 class="display-4">Endereços</h1>
     <br />
 
-        <div class="d-grip gap-2 d-md-flex justify-content-md-start">
-            <a class="btn btn-primary" asp-controller="Endereco" asp-action="Create" role="button">Adicionar endereço</a>
- 
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" asp-controller="Endereco" asp-action="Create" role="button">Adicionar endereço</a>
+
         <form method="post" asp-controller="Endereco" asp-action="ExportarCsv">
-            <button type="submit">Gerar CSV</button>
+            <button class="btn btn-secondary" type="submit">Gerar relatório</button>
         </form>
 
 
-        </div>
-        <br />
+    </div>
+    <br />
 
 
-    
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">CEP</th>
-            <th scope="col">Logradouro</th>
-            <th scope="col">Complemento</th>
-            <th scope="col">Bairro</th>
-            <th scope="col">Cidade</th>
-            <th scope="col">UF</th>
-            <th scope="col">Numero</th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
-            
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">CEP</th>
+                <th scope="col">Logradouro</th>
+                <th scope="col">Complemento</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">UF</th>
+                <th scope="col">Numero</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+
             @if (Model != null && Model.Any())
-                
+
             {
                 foreach (EnderecoModel endereco in Model)
                 {
                     <tr>
-                        <th scope="row"> @endereco.Id<th>
+                        <td scope="row">@endereco.Id</td>
                         <td>@endereco.Cep</td>
                         <td>@endereco.Logradouro</td>
                         <td>@endereco.Complemento</td>
@@ -82,7 +84,7 @@
                 <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado</td></tr>
             }
         </tbody>
-</table>
+    </table>
 
 </div>
 

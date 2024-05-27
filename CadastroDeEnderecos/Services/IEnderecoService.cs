@@ -12,4 +12,3 @@ namespace CadastroDeEnderecos.Services
         public string GerarCsv(List<EnderecoModel> enderecos);
     }
 }
-            

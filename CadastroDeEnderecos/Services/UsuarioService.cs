@@ -43,7 +43,6 @@ namespace CadastroDeEnderecos.Services
             if (usuarioDB == null) throw new System.Exception("Houve um erro na atualização do contato");
 
             usuarioDB.Nome = usuario.Nome;
-            usuarioDB.Email = usuario.Email;
             usuarioDB.Usuario = usuario.Usuario;
 
 

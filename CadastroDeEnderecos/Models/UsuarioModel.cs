@@ -15,10 +15,6 @@ namespace CadastroDeEnderecos.Models
         [StringLength(50, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
         public string Usuario { get; set; }
 
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-
         [Required(ErrorMessage = "Senha é obrigatória.")]
         [StringLength(100, ErrorMessage = "A {0} deve ter pelo menos {2} e no máximo {1} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]

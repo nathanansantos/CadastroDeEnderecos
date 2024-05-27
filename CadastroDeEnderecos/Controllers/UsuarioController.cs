@@ -15,7 +15,6 @@ namespace CadastroDeEnderecos.Controllers
             _usuarioService = usuarioService;
         }
 
-
         public IActionResult Index()
         {
             List<UsuarioModel> usuarios = _usuarioService.BuscarTodos();
@@ -32,15 +31,10 @@ namespace CadastroDeEnderecos.Controllers
         {
             try
             {
-                //if (ModelState.IsValid)
-                //{
-                    novoUsuario = _usuarioService.Adicionar(novoUsuario);
-                    TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso!";
-                //_sessao.CriarSessaoDoUsuario(novoUsuario);
-                return RedirectToAction("Index","Endereco");
-                //return View(novoUsuario);
-                //}
 
+                novoUsuario = _usuarioService.Adicionar(novoUsuario);
+                TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso!";
+                return RedirectToAction("Index", "Endereco");
 
             }
             catch (Exception ex)
@@ -71,7 +65,7 @@ namespace CadastroDeEnderecos.Controllers
                         Id = usuarioSemSenhaModel.Id,
                         Nome = usuarioSemSenhaModel.Nome,
                         Usuario = usuarioSemSenhaModel.Usuario,
-                        Email = usuarioSemSenhaModel.Email
+
                     };
 
                     usuario = _usuarioService.Atualizar(usuario);
