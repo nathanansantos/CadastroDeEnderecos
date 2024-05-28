@@ -4,6 +4,7 @@ namespace CadastroDeEnderecos.Models
 {
     public class UsuarioModel
     {
+        //classe usado como modelo para criação do bd. foi usado data notations pra especificar tipo de dados e restrições
         [Key]
         public int Id { get; set; }
 

@@ -9,23 +9,29 @@ namespace CadastroDeEnderecos.Controllers
     {
         private readonly IUsuarioService _usuarioService;
         private readonly ISessao _sessao;
+
+        //Injeção de dependência para inicializar uma sessão do usuários e os metodos de endereçoService
+
         public UsuarioController(IUsuarioService usuarioService, ISessao sessao)
         {
             _sessao = sessao;
             _usuarioService = usuarioService;
         }
 
+        //mostra usuarios cadastrados
         public IActionResult Index()
         {
             List<UsuarioModel> usuarios = _usuarioService.BuscarTodos();
             return View(usuarios);
         }
 
+        //retorna pagina para criar usuarios
         public IActionResult Create()
         {
             return View();
         }
 
+        //cria usuarios
         [HttpPost]
         public IActionResult Create(UsuarioModel novoUsuario)
         {
@@ -44,13 +50,14 @@ namespace CadastroDeEnderecos.Controllers
             }
         }
 
+        //abre a pagina para editar o usuario selecionado
         public IActionResult Edit(int id)
         {
             UsuarioModel usuario = _usuarioService.ListarPorId(id);
             return View(usuario);
         }
 
-
+        //edita o usuario sem senha
         [HttpPost]
         public IActionResult Edit(UsuarioSemSenhaModel usuarioSemSenhaModel)
         {
@@ -58,8 +65,6 @@ namespace CadastroDeEnderecos.Controllers
             {
                 UsuarioModel usuario = null;
 
-                if (ModelState.IsValid)
-                {
                     usuario = new UsuarioModel()
                     {
                         Id = usuarioSemSenhaModel.Id,
@@ -71,8 +76,7 @@ namespace CadastroDeEnderecos.Controllers
                     usuario = _usuarioService.Atualizar(usuario);
                     TempData["MensagemSucesso"] = "Usuario alterado com sucesso!";
                     return RedirectToAction("Index");
-                }
-                return View(usuario);
+ 
             }
             catch (Exception ex)
             {
@@ -83,12 +87,14 @@ namespace CadastroDeEnderecos.Controllers
             }
         }
 
+        //abre pagina de confirmação de exclusão
         public IActionResult DeleteConfirm(int id)
         {
             UsuarioModel usuario = _usuarioService.ListarPorId(id);
             return View(usuario);
         }
 
+        //executa exclusão
         public IActionResult Delete(int id)
         {
             try

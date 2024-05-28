@@ -4,6 +4,7 @@ namespace CadastroDeEnderecos.Models
 {
     public class LoginModel
     {
+        //classe usado como modelo para criação do bd. foi usado data notations pra especificar tipo de dados e restrições
         [Required(ErrorMessage = "Digite o login")]
         public string Login { get; set; }
 

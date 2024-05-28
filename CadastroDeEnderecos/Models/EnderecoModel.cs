@@ -1,19 +1,18 @@
-﻿using CsvHelper.Configuration.Attributes;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CadastroDeEnderecos.Models
 {
     public class EnderecoModel
     {
+        //classe usado como modelo para criação do bd. foi usado data notations pra especificar tipo de dados e restrições
         [Key]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} é obrigatório")]
         [StringLength(9, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
         [JsonProperty("cep")]
-        public string Cep { get; set; }
+        public string Cep { get; set; } //cep foi definido como string para caso alguem insira hífen (" - ") entre o valor do cep
 
         [Required(ErrorMessage = "{0} é obrigatório")]
         [StringLength(50, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]

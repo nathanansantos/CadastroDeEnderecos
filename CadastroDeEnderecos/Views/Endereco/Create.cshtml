@@ -3,11 +3,13 @@
 @{
 
     ViewData["Title"] = "Cadastrar endereços";
+    //variável cep é criada e recebe o valor do parâmetro “cep” da requisição.
     var cep = Context.Request.Query["cep"];
 
     EnderecoModel endereco = new EnderecoModel();
 
 
+    //se o CEP for válido, a função ConsultaCep(cep) é chamada para obter informações detalhadas sobre o endereço associado ao CEP
     if (validaCep(cep))
     {
         endereco = ConsultaCep(cep);
@@ -76,8 +78,9 @@
 
     public EnderecoModel ConsultaCep(string cep)
     {
-        var enderecoTask = new EnderecoViewModel().GetEnderecoAsync(cep);
+        var enderecoTask = new EnderecoViewModel().GetEnderecoAsync(cep); //esse método faz uma consulta assíncrona para obter informações sobre o endereço associado ao CEP fornecido
 
+        //continuar a execução após a conclusão da tarefa assíncrona.
         enderecoTask.ContinueWith(task =>
         {
             EnderecoModel enderecoTask = task.Result;
@@ -91,6 +94,7 @@
     {
         if (cep == null)
             return false;
+        // a função verifica se o CEP não está vazio e se, após remover os caracteres de hífen, seu comprimento é igual a 8. Se essas condições forem atendidas, a função retorna true, indicando que o CEP é válido
         if (cep != "" && cep.Replace("-", "").Length == 8)
             return true;
         else

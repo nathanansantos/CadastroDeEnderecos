@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroDeEnderecos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+759190d2a08be253778c10c5a6e06ce2c41714fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d62d6b09a5bc07f76642cf0016b5b7ad67c65689")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroDeEnderecos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroDeEnderecos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
